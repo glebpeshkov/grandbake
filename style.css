@@ -2298,3 +2298,52 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-10 .от-кнопки .кнопка { flex: 1 1 100%; }
     #экран-10 .от-подпись { text-align: center; }
   }
+
+/* экран 11 */
+#экран-11 { overflow-x: clip; }
+  #экран-11.светлый, #экран-11.тёмный { background: var(--цвет-фон-2); color: var(--цвет-текст); padding-block: calc(var(--отступ-секции) * .4) 0; }
+  #экран-11 ul { list-style: none; margin: 0; padding: 0; }
+  #экран-11 li::before { content: none; }
+
+  #экран-11 .кн-сетка { display: grid; grid-template-columns: clamp(190px, 17vw, 240px) minmax(0, 1fr); column-gap: clamp(28px, 4vw, 64px); row-gap: clamp(10px, 1.2vw, 16px); align-items: start; }
+  #экран-11 .кн-слова { display: contents; }
+  #экран-11 .кн-слова > * { margin: 0; grid-column: 2; }
+  #экран-11 .кн-слова > h2 { grid-column: 1 / -1; grid-row: 1; }
+  #экран-11 .кн-фото { grid-column: 1; grid-row: 2 / 6; align-self: center; width: 100%; aspect-ratio: 1; margin: 0; border-radius: 50%; overflow: hidden; box-shadow: none; background: none; }
+  #экран-11 .кн-фото img { display: block; width: 220%; max-width: none; height: auto; max-height: none; aspect-ratio: auto; margin-left: -68%; margin-top: -89%; border-radius: 0; }
+
+  #экран-11 h2 { font: 700 1em/1.02 var(--шрифт-заголовков); font-size: var(--кегль-h2); text-transform: uppercase; letter-spacing: 0; text-wrap: balance; }
+  #экран-11.светлый h2, #экран-11.тёмный h2 { color: var(--цвет-текст); }
+  #экран-11 .кн-имя { font: 700 1em/1.15 var(--шрифт-заголовков); font-size: var(--кегль-лид); text-transform: uppercase; letter-spacing: .02em; }
+  #экран-11 .кн-цитата { font-size: var(--кегль-лид); line-height: 1.45; max-width: 46em; text-wrap: pretty; }
+  #экран-11 .кн-призыв { display: grid; gap: 20px; justify-items: start; margin-block: clamp(14px, 1.6vw, 22px) clamp(10px, 1.2vw, 16px); }
+  #экран-11 .кн-призыв .кнопка { min-height: 56px; padding: 0 34px; font-size: var(--кегль-лид); font-weight: 600; }
+  #экран-11 .кн-призыв .кнопка--главная { background: var(--свой-цвет-клюква); color: var(--цвет-на-акценте); }
+  #экран-11 .кн-подпись { margin: 0; font: 400 1.5em/1.15 var(--свой-шрифт-рукописный); }
+  #экран-11.светлый .кн-подпись, #экран-11.тёмный .кн-подпись { color: var(--свой-цвет-корка-тёмная); }
+
+  #экран-11 .кн-способы { display: grid; grid-template-columns: repeat(2, auto); justify-content: start; column-gap: clamp(28px, 4vw, 64px); row-gap: 12px; padding-top: 6px; }
+  #экран-11 .кн-способ { display: flex; align-items: center; gap: 14px; font-size: var(--кегль-лид); line-height: 1.35; }
+  #экран-11 .кн-способ svg { width: 34px; height: 34px; flex: none; }
+  #экран-11 .кн-способ a { color: var(--цвет-текст); text-decoration: none; border-bottom: 1px solid currentColor; }
+
+  #экран-11 .кн-способ--два { grid-column: 1 / -1; }
+  #экран-11 .кн-тел { display: flex; flex-wrap: wrap; column-gap: 20px; }
+
+  #экран-11 .кн-полоса { margin-top: clamp(22px, 2.6vw, 38px); padding-block: clamp(18px, 2.2vw, 30px); }
+  #экран-11.светлый .кн-полоса, #экран-11.тёмный .кн-полоса { background: var(--цвет-акцент); color: var(--цвет-на-акценте); }
+  #экран-11 .кн-реквизиты { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px clamp(20px, 3vw, 48px); font-size: var(--кегль-текст); line-height: 1.4; }
+  #экран-11 .кн-реквизиты > * { margin: 0; }
+  #экран-11 .кн-реквизиты b { font: 700 1em/1.1 var(--шрифт-заголовков); font-size: var(--кегль-лид); text-transform: uppercase; letter-spacing: .02em; }
+
+  @media (max-width: 859px) {
+    #экран-11 .кн-сетка { grid-template-columns: 104px minmax(0, 1fr); column-gap: 16px; row-gap: 16px; align-items: center; }
+    #экран-11 .кн-фото { grid-row: 2; }
+    #экран-11 .кн-имя { grid-column: 2; grid-row: 2; }
+    #экран-11 .кн-цитата, #экран-11 .кн-призыв, #экран-11 .кн-способы { grid-column: 1 / -1; grid-row: auto; }
+    #экран-11 .кн-призыв { justify-items: stretch; }
+    #экран-11 .кн-призыв .кнопка { width: 100%; }
+    #экран-11 .кн-подпись { text-align: left; }
+    #экран-11 .кн-способы { grid-template-columns: 1fr; }
+    #экран-11 .кн-реквизиты { grid-template-columns: 1fr; }
+  }
