@@ -1954,7 +1954,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-04 ul { list-style: none; margin: 0; padding: 0; }
   #экран-04 li::before { content: none; }
 
-  #экран-04 .сх-верх { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); grid-template-areas: "слова кадр" "слова ссылки"; grid-template-rows: 1fr auto; column-gap: clamp(24px, 4vw, 56px); row-gap: 8px; align-items: center; }
+  #экран-04 .сх-верх { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1.13fr); grid-template-areas: "слова кадр" "слова ссылки"; grid-template-rows: 1fr auto; column-gap: clamp(24px, 4vw, 56px); row-gap: 8px; align-items: center; }
   #экран-04 .сх-слова { grid-area: слова; }
   #экран-04 .сх-кадр { grid-area: кадр; }
   #экран-04 .сх-ссылки { grid-area: ссылки; }
@@ -1974,7 +1974,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-04.светлый .сх-цифры b, #экран-04.тёмный .сх-цифры b { color: var(--свой-цвет-корка-тёмная); }
 
   #экран-04 .сх-вкусы { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
-  #экран-04 .сх-вкусы li { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 0; padding: 16px 6px 14px; border-radius: var(--радиус-карточки); text-align: center; font: 500 1em/1.15 var(--шрифт-заголовков); font-size: var(--кегль-текст); text-transform: uppercase; letter-spacing: .04em; }
+  #экран-04 .сх-вкусы li { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 0; padding: 16px 6px 14px; border-radius: var(--радиус-карточки); text-align: center; font: 500 1em/1.15 var(--шрифт-заголовков); font-size: var(--кегль-текст); text-transform: uppercase; letter-spacing: 0; }
   #экран-04 .сх-вкусы svg { width: 34px; height: 34px; padding: 13px; box-sizing: content-box; border-radius: 50%; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
   #экран-04.светлый .сх-вкусы li, #экран-04.тёмный .сх-вкусы li { background: var(--цвет-фон-карточки); border: 1px solid var(--цвет-линия); box-shadow: var(--тень); color: var(--цвет-текст); }
   #экран-04.светлый .сх-вкусы svg, #экран-04.тёмный .сх-вкусы svg { background: var(--цвет-тёплый-мягкий); color: var(--свой-цвет-корка-тёмная); }
