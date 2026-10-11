@@ -1844,6 +1844,14 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-02 .сб-ссылки .кнопка--контур::after { content: none; }
   #экран-02 .кнопка--главная { background: var(--свой-цвет-клюква); color: var(--цвет-на-акценте); }
 
+  @media (min-width: 900px) {
+    #экран-02.светлый, #экран-02.тёмный { padding-top: calc(var(--отступ-секции) * .35); }
+    #экран-02 .сб-шапка { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; margin-bottom: clamp(20px, 2.4vw, 32px); }
+    #экран-02 .сб-текст p { max-width: none; line-height: 1.5; margin-bottom: .6em; }
+    #экран-02 figure.сб-пачка { aspect-ratio: 6 / 5; }
+    #экран-02 .сб-вкус { gap: 6px; }
+    #экран-02 .сб-рука { font-size: calc(var(--кегль-h2) * .9); }
+  }
   @media (max-width: 899px) {
     #экран-02 .сб-шапка { grid-template-columns: 1fr; gap: 18px; }
     #экран-02 .сб-дни ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
