@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Golos+Text:wght@400;500;600&family=Oswald:wght@500;700&family=Marck+Script&display=block');
+:root{--мука:#F6F2EA;--мука2:#EEE7DA;--ладога:#183B57;--ладога-т:#10263A;--корка:#B9722F;--корка-т:#8F5419;--ржаной:#2C211A;--миндаль:#E7D7BF;--мягкий:#5C5048}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:'Golos Text',sans-serif;color:var(--ржаной);font-size:18px;line-height:1.5}
+a{color:inherit}
+.кнопка{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:12px;font:600 18px 'Golos Text';text-decoration:none;border:2px solid transparent}
+.кнопка--главная{background:var(--корка);color:#fff;box-shadow:0 10px 26px rgba(143,84,25,.35)}
+.кнопка--вторая{border-color:currentColor}
+.рука{font-family:'Marck Script',cursive;font-weight:400}
+.факты{list-style:none;margin:0;padding:0}
+.факты li{position:relative;padding-left:34px;font-size:18px;line-height:1.4}
+.факты li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:50%;background:var(--корка) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
+.зерно{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.17 0 0 0 0 0.13 0 0 0 0 0.1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}

@@ -1,0 +1,72 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Грандбейк</title><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<style>
+:root{--клюква:#A0273A}
+body{background:var(--мука);color:var(--ржаной)}
+.экран{position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden}
+.фон{position:absolute;inset:0;background:url("img/oblozhka.webp") 70% 60%/cover}
+.фон::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--мука) 0%,var(--мука) 30%,rgba(246,242,234,.85) 42%,rgba(246,242,234,0) 64%)}
+.тело,.лента{position:relative}
+.тело{flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding:22px 64px 26px;max-width:820px}
+.марка{display:flex;align-items:center;gap:24px;margin-bottom:18px}
+.клеймо{width:470px;flex:none;margin:-4px 0 -4px -8px}.имя{display:block;font:700 64px/1 Oswald;letter-spacing:.03em;margin-bottom:8px}
+.девиз{font:600 25px/1.2 Oswald;text-transform:uppercase;letter-spacing:.05em;color:var(--ладога);max-width:480px}
+h1{margin:0;font:700 clamp(56px,5.8vw,88px)/.95 Oswald;text-transform:uppercase}
+.рука-заг{display:block;font-size:clamp(50px,4.8vw,70px);line-height:1;transform:rotate(-4deg);margin:8px 0 18px 70px;color:var(--корка-т)}
+.под{font-size:24px;font-weight:500;margin:0 0 26px;color:var(--мягкий)}
+.под a{text-decoration-color:var(--корка);text-underline-offset:5px;text-decoration-thickness:2px}
+.кнопки{display:flex;gap:14px;flex-wrap:wrap}
+.кнопка--главная{background:var(--клюква);box-shadow:0 10px 26px rgba(160,39,58,.35)}
+.лента{display:flex;background:var(--ладога);color:var(--мука)}
+.лента span{flex:1 1 0;display:flex;align-items:center;justify-content:center;padding:18px 20px;font:500 20px/1.2 Oswald;letter-spacing:.04em;text-transform:uppercase;text-align:center;border-right:1px solid rgba(231,215,191,.25)}
+.лента span:last-child{border-right:0}
+.лента .широко{flex:1.7 1 0;background:var(--клюква)}
+.лента .средне{flex:1.4 1 0}
+@media(max-width:899px){
+ .фон{position:relative;inset:auto;height:330px;order:1;background-size:165% auto;background-position:88% 62%}
+ .фон::after{background:linear-gradient(180deg,var(--мука) 0%,rgba(246,242,234,0) 9%,rgba(246,242,234,0) 86%,var(--мука) 100%)}
+ .марка{order:0;padding:10px 16px 8px 8px;margin:0;gap:4px 12px;position:relative;display:grid;grid-template-columns:1fr;justify-items:center;text-align:center}.марка .девиз{display:contents}.марка .слоган{white-space:normal;grid-column:1/-1;padding:4px 0 0;font-size:20px;line-height:1.2}
+ .клеймо{width:100%;max-width:360px;margin:0 auto}
+ .тело{order:2;padding:6px 18px 26px}
+ h1{font-size:50px}.рука-заг{font-size:44px;margin-left:30px}
+ .под{font-size:21px}.кнопка{width:100%}
+ .лента{order:3;flex-direction:column}
+ .лента span{justify-content:flex-start;text-align:left;border-right:0;border-bottom:1px solid rgba(231,215,191,.2);padding:14px 18px;font-size:19px}
+}
+@media(min-width:900px){.марка-телефон{display:none}}
+@media(max-width:899px){.тело .марка{display:none}}
+.слоган{display:block;font-size:24px;white-space:nowrap}@media(max-width:899px){.слоган br{display:none}}
+.тело .марка{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:22px}.тело .слоган{font-size:24px;padding-left:6px}
+.клеймо-тёмн{display:none}@media(min-width:900px){.сцена{display:contents}}
+/* Проба П: как О, но светлая — клеймо и надписи на полосах Муки, растворённых в фото, как на компьютере */
+@media(max-width:899px){
+ .экран{display:block;min-height:0}
+ .сцена{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;color:var(--ржаной)}
+ .сцена .фон{position:absolute;inset:0;height:auto;order:0;background-size:cover;background-position:62% 55%}
+ .сцена .фон::after{background:none}
+ .сцена .марка{z-index:0}.сцена .марка::after{content:"";position:absolute;z-index:-1;left:0;right:0;top:0;bottom:-56px;background:linear-gradient(180deg,var(--мука) 0,var(--мука) calc(100% - 96px),rgba(246,242,234,0) 100%)}
+ .сцена .тело{z-index:0}.сцена .тело::before{content:"";position:absolute;z-index:-1;left:0;right:0;top:-64px;bottom:0;background:linear-gradient(180deg,rgba(246,242,234,0) 0,var(--мука) 72px)}
+ .сцена .марка{padding:10px 16px 0}
+ .клеймо-тёмн{display:block}
+ .сцена .тело{position:relative;flex:none;padding:0 18px 22px}
+ h1{font-size:44px}
+ .рука-заг{font-size:40px;margin:4px 0 8px 30px;color:var(--корка-т)}
+ .под{font-size:20px;margin:0 0 16px}
+ .под a{text-decoration-color:var(--корка-т)}
+ .кнопки{flex-wrap:nowrap;gap:10px}.кнопка{width:auto;flex:1 1 0;padding:0 10px;font-size:17px}
+
+}
+</style></head><body><div class="экран зерно">
+<div class="сцена">
+<div class="фон" role="img" aria-label="Кантуччи и штоллен в разрезе"></div>
+<div class="марка марка-телефон"><img class="клеймо клеймо-тёмн" src="img/kleymo.svg" alt="Грандбейк — европейская выпечка на Ладоге, с 1934 года"><span class="девиз"></span></div>
+<main class="тело">
+ <div class="марка"><img class="клеймо" src="img/kleymo.svg" alt="Грандбейк — европейская выпечка на Ладоге, с 1934 года"><span class="девиз"></span></div>
+ <h1>Завод с историей,</h1>
+ <span class="рука рука-заг">рецепты новые</span>
+ <p class="под"><a href="#">Кантуччи, бискотти</a> и <a href="#">штоллен</a></p>
+ <div class="кнопки"><a class="кнопка кнопка--главная" href="#">Напишите нам</a><a class="кнопка кнопка--вторая" href="#">Где купить</a></div>
+</main>
+</div>
+<div class="лента"><span class="широко">9 торговых сетей доверили нам свои полки</span><span>Без пальмового масла</span><span>ISO 22000 и 9001</span><span>До 180 дней хранения</span><span class="средне">Сертифицирован для экспорта в Китай</span></div>
+</div></body></html>
