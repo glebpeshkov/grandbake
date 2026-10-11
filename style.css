@@ -2031,3 +2031,41 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-04 .сх-строка li:last-child { grid-column: 1 / -1; border-bottom: 0; }
     #экран-04 .сх-ссылки .кнопка { flex: 1 1 0; padding: 0 10px; }
   }
+
+/* экран 05 */
+#экран-05 { overflow-x: clip; }
+  #экран-05.светлый, #экран-05.тёмный { background: var(--цвет-тёмный-фон-2); color: var(--цвет-тёмный-текст); padding-block: var(--отступ-секции); }
+  #экран-05 ul { list-style: none; margin: 0; padding: 0; }
+  #экран-05 li::before { content: none; }
+
+  #экран-05 .пр-шапка { display: grid; gap: 14px; justify-items: start; margin-bottom: clamp(28px, 4vw, 52px); max-width: 22em; }
+  #экран-05 .пр-шапка > * { margin: 0; }
+  #экран-05 .пр-кикер { font: 500 1em/1.2 var(--шрифт-заголовков); font-size: var(--кегль-кикер); text-transform: uppercase; letter-spacing: .14em; }
+  #экран-05 .пр-шапка h2 { font: 700 1em/1.02 var(--шрифт-заголовков); font-size: var(--кегль-h2); text-transform: uppercase; letter-spacing: 0; text-wrap: balance; }
+  #экран-05.светлый .пр-кикер, #экран-05.тёмный .пр-кикер { color: var(--цвет-тёплый-мягкий); }
+  #экран-05.светлый .пр-шапка h2, #экран-05.тёмный .пр-шапка h2 { color: var(--цвет-тёмный-текст); }
+
+  #экран-05 .пр-каналы { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 32px); align-items: stretch; }
+  #экран-05 .пр-канал { margin: 0; min-width: 0; display: flex; flex-direction: column; overflow: hidden; border-radius: var(--радиус-карточки); box-sizing: border-box; }
+  #экран-05.светлый .пр-канал, #экран-05.тёмный .пр-канал { background: var(--цвет-фон-карточки); color: var(--цвет-текст); box-shadow: var(--тень-глубокая); }
+  #экран-05 figure.пр-кадр { margin: 0; padding: 0; width: 100%; aspect-ratio: 5 / 3; border-radius: 0; box-shadow: none; background: none; overflow: hidden; }
+  #экран-05 figure.пр-кадр img { display: block; width: 100%; height: 100%; aspect-ratio: 5 / 3; object-fit: cover; border-radius: 0; }
+  #экран-05 figure.пр-кадр .заглушка-картинки { width: 100%; height: 100%; min-height: 0; aspect-ratio: 5 / 3; }
+  #экран-05 .пр-тело { display: grid; gap: 14px; padding: clamp(18px, 2vw, 28px); align-content: start; }
+  #экран-05 .пр-тело h3 { margin: 0; font: 700 1em/1.1 var(--шрифт-заголовков); font-size: var(--кегль-цифра); text-transform: uppercase; letter-spacing: .02em; }
+  #экран-05.светлый .пр-тело h3, #экран-05.тёмный .пр-тело h3 { color: var(--цвет-текст); }
+  #экран-05 .пр-тело ul { display: grid; gap: 10px; }
+  #экран-05 .пр-тело li { position: relative; margin: 0; padding-left: 1.3em; font-size: var(--кегль-лид); line-height: 1.45; text-wrap: pretty; }
+  #экран-05 .пр-тело li::before { content: ""; position: absolute; left: 0; top: .6em; width: .5em; height: .5em; border-radius: 50%; }
+  #экран-05.светлый .пр-тело li, #экран-05.тёмный .пр-тело li { color: var(--цвет-текст-мягкий); }
+  #экран-05.светлый .пр-тело li::before, #экран-05.тёмный .пр-тело li::before { background: var(--цвет-акцент-маркер); }
+
+  #экран-05 .пр-действие { display: grid; justify-items: center; gap: 14px; margin-top: clamp(32px, 4vw, 56px); text-align: center; }
+  #экран-05 .пр-действие p { margin: 0; font-size: var(--кегль-лид); line-height: 1.4; }
+  #экран-05.светлый .пр-действие p, #экран-05.тёмный .пр-действие p { color: var(--цвет-тёмный-текст); }
+  #экран-05 .пр-действие .кнопка { min-height: 56px; padding: 0 34px; font-size: var(--кегль-лид); font-weight: 600; }
+  #экран-05 .пр-действие .кнопка--главная { background: var(--свой-цвет-клюква); color: var(--цвет-на-акценте); }
+
+  @media (max-width: 759px) {
+    #экран-05 .пр-каналы { grid-template-columns: 1fr; }
+  }
