@@ -1,72 +1,146 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Грандбейк</title><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Грандбейк</title>
+<meta name="description" content="">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://glebpeshkov.github.io/grandbake/">
+<meta property="og:title" content="Грандбейк">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Грандбейк",
+  "@id": "https://glebpeshkov.github.io/grandbake/#person",
+  "jobTitle": "Европейская выпечка на Ладоге · с 1934 года",
+  "description": "Общий бренд Сясьстройского хлебозавода (Ленинградская область, основан в 1934 году): кантуччи и бискотти «Моника» — первые российские кантуччи в сетях с 2016 года, «Ладожский штоллен», сухари «Ладожские». Та же рецептура, наше исполнение: двойное запекание, состав без пальмового масла в линейке «Моника», до 180 дней хранения без консервантов.",
+  "url": "https://glebpeshkov.github.io/grandbake/"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Golos+Text:wght@400;600&display=swap">
 <link rel="stylesheet" href="style.css">
 <style>
-:root{--клюква:#A0273A}
-body{background:var(--мука);color:var(--ржаной)}
-.экран{position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden}
-.фон{position:absolute;inset:0;background:url("img/oblozhka.webp") 70% 60%/cover}
-.фон::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--мука) 0%,var(--мука) 30%,rgba(246,242,234,.85) 42%,rgba(246,242,234,0) 64%)}
-.тело,.лента{position:relative}
-.тело{flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding:22px 64px 26px;max-width:820px}
-.марка{display:flex;align-items:center;gap:24px;margin-bottom:18px}
-.клеймо{width:470px;flex:none;margin:-4px 0 -4px -8px}.имя{display:block;font:700 64px/1 Oswald;letter-spacing:.03em;margin-bottom:8px}
-.девиз{font:600 25px/1.2 Oswald;text-transform:uppercase;letter-spacing:.05em;color:var(--ладога);max-width:480px}
-h1{margin:0;font:700 clamp(56px,5.8vw,88px)/.95 Oswald;text-transform:uppercase}
-.рука-заг{display:block;font-size:clamp(50px,4.8vw,70px);line-height:1;transform:rotate(-4deg);margin:8px 0 18px 70px;color:var(--корка-т)}
-.под{font-size:24px;font-weight:500;margin:0 0 26px;color:var(--мягкий)}
-.под a{text-decoration-color:var(--корка);text-underline-offset:5px;text-decoration-thickness:2px}
-.кнопки{display:flex;gap:14px;flex-wrap:wrap}
-.кнопка--главная{background:var(--клюква);box-shadow:0 10px 26px rgba(160,39,58,.35)}
-.лента{display:flex;background:var(--ладога);color:var(--мука)}
-.лента span{flex:1 1 0;display:flex;align-items:center;justify-content:center;padding:18px 20px;font:500 20px/1.2 Oswald;letter-spacing:.04em;text-transform:uppercase;text-align:center;border-right:1px solid rgba(231,215,191,.25)}
-.лента span:last-child{border-right:0}
-.лента .широко{flex:1.7 1 0;background:var(--клюква)}
-.лента .средне{flex:1.4 1 0}
-@media(max-width:899px){
- .фон{position:relative;inset:auto;height:330px;order:1;background-size:165% auto;background-position:88% 62%}
- .фон::after{background:linear-gradient(180deg,var(--мука) 0%,rgba(246,242,234,0) 9%,rgba(246,242,234,0) 86%,var(--мука) 100%)}
- .марка{order:0;padding:10px 16px 8px 8px;margin:0;gap:4px 12px;position:relative;display:grid;grid-template-columns:1fr;justify-items:center;text-align:center}.марка .девиз{display:contents}.марка .слоган{white-space:normal;grid-column:1/-1;padding:4px 0 0;font-size:20px;line-height:1.2}
- .клеймо{width:100%;max-width:360px;margin:0 auto}
- .тело{order:2;padding:6px 18px 26px}
- h1{font-size:50px}.рука-заг{font-size:44px;margin-left:30px}
- .под{font-size:21px}.кнопка{width:100%}
- .лента{order:3;flex-direction:column}
- .лента span{justify-content:flex-start;text-align:left;border-right:0;border-bottom:1px solid rgba(231,215,191,.2);padding:14px 18px;font-size:19px}
+:root {
+  --шрифт-заголовков: Oswald, 'Arial Narrow', sans-serif;  --свой-шрифт-рукописный: 'Marck Script', cursive;  --свой-цвет-клюква: #A0273A;  --свой-цвет-корка-тёмная: #8F5419;
+  --шрифт-текста: 'Golos Text', -apple-system, 'Segoe UI', sans-serif;
+  --цвет-фон: #F6F2EA;  --цвет-фон-2: #EEE7DA;  --цвет-фон-карточки: #FBF8F2;
+  --цвет-текст: #2C211A;  --цвет-текст-мягкий: #5C5048;  --цвет-текст-тихий: #9A8E83;
+  --цвет-акцент: #183B57;  --цвет-акцент-тёмный: #10263A;  --цвет-акцент-яркий: #2E5978;  --цвет-акцент-глубже: #1F4867;  --цвет-акцент-маркер: #B9722F;
+  --цвет-на-акценте: #F6F2EA;  --цвет-линия: #D9CFBF;
+  --цвет-тёмный-фон: #10263A;  --цвет-тёмный-фон-2: #183B57;  --цвет-тёмный-текст: #F6F2EA;  --цвет-тёмный-фон-3: #0C1F30;  --цвет-тёмный-фон-4: #0E2335;
+  --цвет-тёплый: #B9722F;  --цвет-тёплый-мягкий: #E7D7BF;
+  --цвет-стекло: color-mix(in srgb, #10263A 86%, transparent);
+  --тень: 0 12px 34px color-mix(in srgb, #10263A 6%, transparent);
+  --тень-чип: 0 10px 30px color-mix(in srgb, #10263A 12%, transparent);
+  --тень-глубокая: 0 24px 60px color-mix(in srgb, #10263A 35%, transparent);
+  --тень-спутник: 0 30px 60px color-mix(in srgb, #10263A 70%, transparent);
+  --тень-плиты: 0 40px 100px color-mix(in srgb, #10263A 70%, transparent);
+  --кегль-h1: 44px;  --кегль-h2: clamp(28px, 4.5vw, 44px);
+  --кегль-текст: clamp(16px, 1vw, 17px);  --кегль-лид: clamp(17px, 1.1vw, 18px);
+  --кегль-мелкий: 14px;  --кегль-кикер: clamp(14px, 1.1vw, 15px);
+  --кегль-цифра: 30px;  --разрядка-кикера: .03em;
+  --отступ-секции: clamp(56px, 9vw, 120px);  --отступ-блока: clamp(16px, 2vw, 28px);
+  --отступ-секции-тихо: clamp(44px, 7vw, 94px);  --отступ-секции-громко: clamp(64px, 10.5vw, 140px);
+  --ширина: 1120px;  --ширина-колонки: 560px;  --радиус: 16px;  --радиус-малый: 8px;
+  --радиус-карточки: 18px;  --радиус-плитки: 22px;  --радиус-телефон: 46px;  --кнопка-радиус: 14px;
+  --радиус-модуля: 16px;  --нить: 2px;
+  --плавность: cubic-bezier(.2, .7, .2, 1);  --длительность: .25s;
+  --цвет-тёплый-тёмный: #9D6028;
 }
-@media(min-width:900px){.марка-телефон{display:none}}
-@media(max-width:899px){.тело .марка{display:none}}
-.слоган{display:block;font-size:24px;white-space:nowrap}@media(max-width:899px){.слоган br{display:none}}
-.тело .марка{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:22px}.тело .слоган{font-size:24px;padding-left:6px}
-.клеймо-тёмн{display:none}@media(min-width:900px){.сцена{display:contents}}
-/* Проба П: как О, но светлая — клеймо и надписи на полосах Муки, растворённых в фото, как на компьютере */
-@media(max-width:899px){
- .экран{display:block;min-height:0}
- .сцена{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;color:var(--ржаной)}
- .сцена .фон{position:absolute;inset:0;height:auto;order:0;background-size:cover;background-position:62% 55%}
- .сцена .фон::after{background:none}
- .сцена .марка{z-index:0}.сцена .марка::after{content:"";position:absolute;z-index:-1;left:0;right:0;top:0;bottom:-56px;background:linear-gradient(180deg,var(--мука) 0,var(--мука) calc(100% - 96px),rgba(246,242,234,0) 100%)}
- .сцена .тело{z-index:0}.сцена .тело::before{content:"";position:absolute;z-index:-1;left:0;right:0;top:-64px;bottom:0;background:linear-gradient(180deg,rgba(246,242,234,0) 0,var(--мука) 72px)}
- .сцена .марка{padding:10px 16px 0}
- .клеймо-тёмн{display:block}
- .сцена .тело{position:relative;flex:none;padding:0 18px 22px}
- h1{font-size:44px}
- .рука-заг{font-size:40px;margin:4px 0 8px 30px;color:var(--корка-т)}
- .под{font-size:20px;margin:0 0 16px}
- .под a{text-decoration-color:var(--корка-т)}
- .кнопки{flex-wrap:nowrap;gap:10px}.кнопка{width:auto;flex:1 1 0;padding:0 10px;font-size:17px}
+@media (min-width: 900px) {
+  :root { --кегль-h1: clamp(56px, 5.8vw, 88px); }
+}
+:root, .светлый { --цвет-кнопки: #183B57; --цвет-на-кнопке: #F6F2EA; --цвет-кнопки-навёл: var(--цвет-акцент-тёмный); }
+.тёмный { --цвет-кнопки: #E7D7BF; --цвет-на-кнопке: #10263A; --цвет-кнопки-навёл: #F2EADD; }
 
-}
-</style></head><body><div class="экран зерно">
-<div class="сцена">
-<div class="фон" role="img" aria-label="Кантуччи и штоллен в разрезе"></div>
-<div class="марка марка-телефон"><img class="клеймо клеймо-тёмн" src="img/kleymo.svg" alt="Грандбейк — европейская выпечка на Ладоге, с 1934 года"><span class="девиз"></span></div>
-<main class="тело">
- <div class="марка"><img class="клеймо" src="img/kleymo.svg" alt="Грандбейк — европейская выпечка на Ладоге, с 1934 года"><span class="девиз"></span></div>
- <h1>Завод с историей,</h1>
- <span class="рука рука-заг">рецепты новые</span>
- <p class="под"><a href="#">Кантуччи, бискотти</a> и <a href="#">штоллен</a></p>
- <div class="кнопки"><a class="кнопка кнопка--главная" href="#">Напишите нам</a><a class="кнопка кнопка--вторая" href="#">Где купить</a></div>
-</main>
+</style>
+<script>
+(function () {
+  var ЭТАЛОН = 0.535;                  // очко Open Sans — текстовой гарнитуры утверждённых макетов
+  var ПОТОЛОК = 1.2, МЁРТВАЯ = 0.02;   // выше потолка расползается раскладка; ближе к единице не трогаем вовсе
+  var КОМПЬЮТЕР = "(min-width: 900px)";
+  var ТОКЕНЫ = ["--кегль-текст", "--кегль-лид", "--кегль-мелкий", "--кегль-кикер"];
+  var корень = document.documentElement;
+  var холст = document.createElement("canvas").getContext("2d");
+  var ждём = 0;
+
+  function мера(буква) { var м = холст.measureText(буква); return (м && м.actualBoundingBoxAscent) || 0; }
+
+  function применить() {
+    ждём = 0;
+    if (!холст) { return; }
+
+    for (var i = 0; i < ТОКЕНЫ.length; i++) { корень.style.removeProperty(ТОКЕНЫ[i]); }
+    var стиль = getComputedStyle(корень), стек = стиль.getPropertyValue("--шрифт-текста").trim();
+    if (!стек) { return; }
+    холст.font = "400 100px " + стек;
+
+    var очко = Math.max(мера("х"), мера("x")) / 100;
+    if (!(очко > 0)) { return; }
+    var k = Math.round(Math.min(ПОТОЛОК, Math.max(1, ЭТАЛОН / очко)) * 1000) / 1000;
+    if (k - 1 < МЁРТВАЯ || !matchMedia(КОМПЬЮТЕР).matches) { k = 1; }
+    корень.setAttribute("data-очко", очко.toFixed(3));      // чтобы проверка могла сказать числа вслух
+    корень.setAttribute("data-поправка", k.toFixed(3));
+    if (k === 1) { return; }
+    for (i = 0; i < ТОКЕНЫ.length; i++) {
+      var было = стиль.getPropertyValue(ТОКЕНЫ[i]).trim();
+      if (было) { корень.style.setProperty(ТОКЕНЫ[i], "calc((" + было + ") * " + k + ")"); }
+    }
+  }
+
+  применить();
+
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(применить); }
+
+  addEventListener("resize", function () { ждём = ждём || requestAnimationFrame(применить); });
+})();
+</script>
+</head>
+<body class="с-липкой-кнопкой">
+<section class="блок блок--первый-экран светлый фон--зерно сторона--слева" id="экран-01" data-тип="первый-экран" data-вёрстка="своя">
+<div class="гб-сцена">
+  <figure class="фото первый-экран__картинка"><img src="img/oblozhka.webp" alt="Кантуччи и штоллен в разрезе" fetchpriority="high"></figure>
+  <figure class="фото гб-марка"><img class="клеймо" src="img/kleymo.svg" alt="Грандбейк — европейская выпечка на Ладоге, с 1934 года"></figure>
+  <div class="гб-текст">
+    <h1>Завод с историей, <span class="гб-рука">рецепты новые</span></h1>
+    <p class="лид"><a href="#экран-02">Кантуччи, бискотти</a> и <a href="#экран-03">штоллен</a></p>
+    <div class="первый-экран__действие"><a class="кнопка кнопка--главная" href="mailto:grandbake@mail.ru">Напишите нам</a><a class="кнопка кнопка--контур" href="#экран-10">Где купить</a></div>
+  </div>
 </div>
-<div class="лента"><span class="широко">9 торговых сетей доверили нам свои полки</span><span>Без пальмового масла</span><span>ISO 22000 и 9001</span><span>До 180 дней хранения</span><span class="средне">Сертифицирован для экспорта в Китай</span></div>
-</div></body></html>
+<ul class="гб-факты">
+  <li class="часть__имя широко">9 торговых сетей доверили нам свои полки</li>
+  <li class="часть__имя">Без пальмового масла</li>
+  <li class="часть__имя">ISO 22000 и 9001</li>
+  <li class="часть__имя">До 180 дней хранения</li>
+  <li class="часть__имя средне">Сертифицирован для экспорта в Китай</li>
+</ul>
+</section>
+<div class="липкая-кнопка"><a class="кнопка кнопка--главная" href="mailto:grandbake@mail.ru">Напишите нам</a></div>
+<script>
+(function () {
+  var СПИТ = "главная-на-виду";                       // класс на body; правило сна — в стилях
+  var кнопка = document.querySelector(".первый-экран__действие .кнопка--главная");
+  if (!кнопка || !window.IntersectionObserver) { return; }
+
+  function пометить(на_виду) { document.body.classList.toggle(СПИТ, !!на_виду); }
+
+  var б = кнопка.getBoundingClientRect();
+  пометить(б.bottom > 0 && б.top < (window.innerHeight || 0));
+
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () { document.body.classList.add("панель-с-переходом"); });
+  });
+
+  new IntersectionObserver(function (записи) {
+    пометить(записи[записи.length - 1].isIntersecting);
+  }, { threshold: 0 }).observe(кнопка);
+})();
+</script>
+</body>
+</html>
