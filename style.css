@@ -2199,3 +2199,56 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-08 .ис-плитка .ис-год { font-size: calc(var(--кегль-цифра) * 2.8); }
     #экран-08 .ис-плитка .ис-год--девять { font-size: calc(var(--кегль-цифра) * 4.3); }
   }
+
+/* экран 09 */
+#экран-09 { overflow-x: clip; }
+  #экран-09.светлый, #экран-09.тёмный { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); padding-block: calc(var(--отступ-секции) * .4) calc(var(--отступ-секции) * .45); }
+
+  #экран-09 h2 { margin: 0 0 clamp(14px, 1.6vw, 22px); font: 700 1em/1.02 var(--шрифт-заголовков); font-size: var(--кегль-h2); text-transform: uppercase; letter-spacing: 0; text-wrap: balance; }
+  #экран-09.светлый h2, #экран-09.тёмный h2 { color: var(--цвет-текст); }
+  #экран-09 .нс-группа + .нс-группа { margin-top: clamp(26px, 2.8vw, 40px); }
+  #экран-09 h3 { margin: 0 0 12px; font: 400 1.9em/1 var(--свой-шрифт-рукописный); text-transform: none; letter-spacing: 0; }
+  #экран-09.светлый h3, #экран-09.тёмный h3 { color: var(--свой-цвет-корка-тёмная); }
+
+  #экран-09 .нс-сетка { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: clamp(18px, 2vw, 28px); row-gap: clamp(22px, 2.4vw, 34px); align-items: start; --нс-кадр: clamp(130px, 10.6vw, 152px); }
+  #экран-09 .нс-карта { margin: 0; display: grid; grid-template-rows: var(--нс-кадр) auto auto; gap: 10px; }
+  #экран-09 .нс-кадр { position: relative; display: block; height: var(--нс-кадр); border-radius: var(--радиус-карточки); overflow: hidden; }
+  #экран-09 a.нс-кадр { cursor: zoom-in; }
+  #экран-09 a.нс-кадр:focus-visible { outline: 3px solid var(--свой-цвет-клюква); outline-offset: 3px; }
+  #экран-09 .нс-кадр img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; border-radius: 0; transition: transform .35s ease; }
+  #экран-09 a.нс-кадр:hover img { transform: scale(1.04); }
+  #экран-09 .нс-кадр img.нс-низ-слева { object-position: 0 100%; }
+  #экран-09 .нс-кадр img.нс-центр { object-position: 50% 45%; }
+  #экран-09 .нс-кадр img.нс-диплом { object-position: 50% 36%; }
+
+  #экран-09 .нс-карта--плитка { grid-template-rows: auto 1px auto; gap: 0; }
+  #экран-09 .нс-карта--плитка .нс-кадр { height: calc(var(--нс-кадр) + 10px + calc(var(--кегль-цифра) * 1.2) + 10px); }
+  #экран-09 .нс-карта--плитка .нс-текст { margin-top: 10px; }
+  #экран-09 .нс-плитка { box-sizing: border-box; height: 100%; display: flex; align-items: flex-end; padding: 0 clamp(14px, 1.4vw, 20px) 12px; }
+  #экран-09.светлый .нс-плитка, #экран-09.тёмный .нс-плитка { background: var(--цвет-фон); }
+
+  #экран-09 .нс-имя { margin: 0; font: 700 1em/1 var(--шрифт-заголовков); font-size: calc(var(--кегль-цифра) * 1.2); letter-spacing: .01em; text-transform: uppercase; padding-bottom: 10px; box-sizing: content-box; }
+  #экран-09.светлый .нс-имя, #экран-09.тёмный .нс-имя { color: var(--свой-цвет-корка-тёмная); border-bottom: 1px solid var(--цвет-линия); }
+  #экран-09 .нс-плитка .нс-имя { padding: 0; border: 0; line-height: .95; font-size: calc(var(--кегль-цифра) * 1.45); display: grid; }
+  #экран-09.светлый .нс-плитка .нс-имя, #экран-09.тёмный .нс-плитка .нс-имя { border: 0; }
+  #экран-09 .нс-плитка .нс-имя span { display: block; }
+  #экран-09 .нс-линия { height: 1px; margin: 0; }
+  #экран-09.светлый .нс-линия, #экран-09.тёмный .нс-линия { background: var(--цвет-линия); }
+
+  #экран-09 .нс-текст { margin: 0; font-size: var(--кегль-текст); line-height: 1.4; text-wrap: pretty; }
+  #экран-09.светлый .нс-текст, #экран-09.тёмный .нс-текст { color: var(--цвет-текст); }
+  #экран-09 .нс-текст small { display: block; margin-top: 4px; font-size: 1em; }
+
+  #экран-09 dialog.нс-окно { box-sizing: border-box; width: 100vw; height: 100svh; max-width: none; max-height: none; margin: 0; padding: 3svh 2vw; border: 0; background: transparent; overflow: hidden; }
+  #экран-09 dialog.нс-окно[open] { display: flex; align-items: center; justify-content: center; }
+  #экран-09 dialog.нс-окно::backdrop { background: rgb(24 59 87 / .86); }
+  #экран-09 dialog.нс-окно img { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; border-radius: var(--радиус-карточки); }
+  #экран-09 .нс-закрыть { position: fixed; top: 14px; right: 14px; width: 52px; height: 52px; border: 0; border-radius: 50%; font: 400 32px/1 var(--шрифт-текста, sans-serif); cursor: pointer; background: var(--цвет-фон); color: var(--цвет-текст); }
+
+  @media (max-width: 1099px) {
+    #экран-09 .нс-сетка { grid-template-columns: repeat(2, minmax(0, 1fr)); --нс-кадр: clamp(150px, 22vw, 200px); }
+  }
+  @media (max-width: 599px) {
+    #экран-09 .нс-сетка { grid-template-columns: 1fr; --нс-кадр: 180px; row-gap: 30px; }
+    #экран-09 .нс-плитка .нс-имя { font-size: calc(var(--кегль-цифра) * 2); }
+  }
