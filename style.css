@@ -1783,3 +1783,160 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-01 .гб-факты { flex-direction: column; }
     #экран-01 .гб-факты li { justify-content: flex-start; text-align: left; border-right: 0; border-bottom: 1px solid color-mix(in srgb, var(--цвет-тёплый-мягкий) 20%, transparent); padding: 14px 18px; font-size: 19px; }
   }
+
+/* экран 02 */
+#экран-02.светлый, #экран-02.тёмный { background: var(--цвет-фон); color: var(--цвет-текст); padding-block: var(--отступ-секции); border-top: var(--нить) solid var(--цвет-линия); }
+  #экран-02 ul { list-style: none; margin: 0; padding: 0; }
+  #экран-02 li::before { content: none; }
+
+  #экран-02 .сб-шапка { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(24px, 5vw, 72px); align-items: start; margin-bottom: clamp(32px, 4vw, 52px); }
+  #экран-02 .сб-рука { display: inline-block; margin: 0 0 14px; font: 400 1em/1.1 var(--свой-шрифт-рукописный); font-size: calc(var(--кегль-h2) * 1.1); transform: rotate(-3deg); transform-origin: left center; }
+  #экран-02 .сб-шапка h2 { margin: 0; font: 700 1em/1.02 var(--шрифт-заголовков); font-size: var(--кегль-h2); text-transform: uppercase; letter-spacing: 0; text-wrap: balance; }
+  #экран-02 .сб-текст p { margin: 0 0 1em; max-width: 60ch; font-size: var(--кегль-текст); line-height: 1.6; }
+  #экран-02 .сб-текст p:last-child { margin-bottom: 0; }
+  #экран-02 .сб-текст .сб-лид { font-size: var(--кегль-лид); }
+  #экран-02 .сб-текст b, #экран-02 .сб-текст strong { font-weight: 700; }
+  #экран-02.светлый .сб-рука, #экран-02.тёмный .сб-рука { color: var(--свой-цвет-корка-тёмная); }
+  #экран-02.светлый .сб-шапка h2, #экран-02.тёмный .сб-шапка h2 { color: var(--цвет-текст); }
+  #экран-02.светлый .сб-текст p, #экран-02.тёмный .сб-текст p { color: var(--цвет-текст-мягкий); }
+  #экран-02.светлый .сб-текст b, #экран-02.тёмный .сб-текст b, #экран-02.светлый .сб-текст strong, #экран-02.тёмный .сб-текст strong { color: var(--цвет-текст); }
+
+  #экран-02 .сб-вкусы { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: clamp(14px, 2vw, 24px); align-items: stretch; }
+  #экран-02 .сб-вкус { margin: 0; min-width: 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: clamp(14px, 1.6vw, 20px); border-radius: var(--радиус-карточки); box-sizing: border-box; }
+  #экран-02.светлый .сб-вкус, #экран-02.тёмный .сб-вкус { background: var(--цвет-фон-карточки); border: 1px solid var(--цвет-линия); box-shadow: var(--тень); color: var(--цвет-текст); }
+  #экран-02 figure.сб-пачка { position: relative; width: 100%; aspect-ratio: 5 / 6; margin: 0; padding: 0; background: none; box-shadow: none; border-radius: 0; overflow: visible; }
+  #экран-02 figure.сб-пачка img { position: absolute; left: 8px; top: 8px; width: calc(100% - 16px); height: calc(100% - 16px); aspect-ratio: auto; object-fit: contain; object-position: center bottom; border-radius: 0; transform: none; filter: drop-shadow(0 10px 10px color-mix(in srgb, var(--цвет-текст) 24%, transparent)); }
+  #экран-02 .сб-вкус h3 { margin: 4px 0 0; font-size: var(--кегль-лид); line-height: 1.25; font-weight: 600; text-wrap: balance; color: var(--цвет-текст); }
+  #экран-02 .сб-строка { margin: -4px 0 0; font-size: var(--кегль-мелкий); line-height: 1.4; color: var(--цвет-текст-мягкий); }
+  #экран-02 .сб-состав { margin-top: auto; width: 100%; font-size: var(--кегль-мелкий); }
+  #экран-02 .сб-состав summary { display: inline-flex; align-items: center; gap: .5em; min-height: 40px; box-sizing: border-box; padding: 0 1.1em; border: 1.5px solid currentColor; border-radius: var(--радиус-малый); cursor: pointer; font-weight: 600; letter-spacing: var(--разрядка-кикера); list-style: none; color: var(--цвет-текст); }
+  #экран-02 .сб-состав summary::-webkit-details-marker { display: none; }
+  #экран-02 .сб-состав summary::after { content: "+"; font-weight: 400; }
+  #экран-02 .сб-состав[open] summary::after { content: "−"; }
+  #экран-02 .сб-состав summary:focus-visible { outline: 2px solid var(--цвет-акцент-маркер); outline-offset: 3px; }
+  #экран-02 .сб-состав p { margin: 12px 0 0; text-align: left; line-height: 1.45; overflow-wrap: anywhere; color: var(--цвет-текст-мягкий); }
+
+  #экран-02 .сб-полоса { display: flex; margin: clamp(28px, 4vw, 44px) 0 0; padding: 0; border-radius: var(--радиус); overflow: hidden; }
+  #экран-02.светлый .сб-полоса, #экран-02.тёмный .сб-полоса { background: var(--цвет-акцент); color: var(--цвет-на-акценте); }
+  #экран-02 .сб-полоса li { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; margin: 0; padding: 18px 20px; font: 500 1em/1.2 var(--шрифт-заголовков); font-size: var(--кегль-лид); letter-spacing: .04em; text-transform: uppercase; text-align: center; border-right: 1px solid color-mix(in srgb, var(--цвет-тёплый-мягкий) 25%, transparent); color: var(--цвет-на-акценте); }
+  #экран-02 .сб-полоса li:last-child { border-right: 0; }
+  #экран-02 .сб-полоса li.сб-обр { flex-direction: column-reverse; }
+  #экран-02 .сб-полоса b { font: 500 1em/1.1 var(--шрифт-заголовков); font-size: var(--кегль-цифра); letter-spacing: .02em; }
+
+  #экран-02 .сб-дни { margin-top: clamp(40px, 6vw, 72px); }
+  #экран-02 .сб-дни > h3 { margin: 0 0 clamp(16px, 2vw, 24px); font: 700 1em/1.05 var(--шрифт-заголовков); font-size: var(--кегль-h2); text-transform: uppercase; color: var(--цвет-текст); }
+  #экран-02 .сб-дни ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(14px, 2vw, 24px); }
+  #экран-02 .сб-день { margin: 0; min-width: 0; overflow: hidden; border-radius: var(--радиус-плитки); }
+  #экран-02.светлый .сб-день, #экран-02.тёмный .сб-день { background: var(--цвет-фон-2); color: var(--цвет-текст); border: 1px solid var(--цвет-линия); }
+  #экран-02 figure.сб-кадр { margin: 0; border-radius: 0; box-shadow: none; }
+  #экран-02 figure.сб-кадр img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0; }
+  #экран-02 .сб-день__тело { padding: clamp(14px, 1.6vw, 20px); }
+  #экран-02 .сб-слово { display: flex; align-items: center; gap: 10px; margin: 0 0 8px; }
+  #экран-02 .сб-слово svg { flex: none; width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  #экран-02.светлый .сб-слово svg, #экран-02.тёмный .сб-слово svg { color: var(--цвет-акцент-маркер); }
+  #экран-02 .сб-слово b { font: 500 1em/1 var(--шрифт-заголовков); font-size: calc(var(--кегль-h2) * .75); text-transform: uppercase; letter-spacing: .02em; color: var(--цвет-текст); }
+  #экран-02 .сб-день p { margin: 0; font-size: var(--кегль-текст); line-height: 1.45; color: var(--цвет-текст-мягкий); }
+  #экран-02 .сб-день p::first-letter { text-transform: uppercase; }
+
+  #экран-02 .сб-ссылки { display: flex; flex-wrap: wrap; gap: 14px; margin-top: clamp(32px, 5vw, 52px); }
+  #экран-02 .сб-ссылки .кнопка { flex: 0 0 auto; min-height: 56px; padding: 0 30px; font-size: var(--кегль-лид); font-weight: 600; }
+  #экран-02 .сб-ссылки .кнопка--контур { border: 2px solid currentColor; color: var(--цвет-текст); background: transparent; box-shadow: none; }
+  #экран-02 .сб-ссылки .кнопка--контур::after { content: none; }
+  #экран-02 .кнопка--главная { background: var(--свой-цвет-клюква); color: var(--цвет-на-акценте); }
+
+  @media (max-width: 899px) {
+    #экран-02 .сб-шапка { grid-template-columns: 1fr; gap: 18px; }
+    #экран-02 .сб-дни ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 599px) {
+    #экран-02 .сб-вкусы { grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 12px; }
+    #экран-02 .сб-вкус { padding: 12px 10px; }
+    #экран-02 .сб-полоса { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #экран-02 .сб-полоса li { padding: 14px 10px; }
+    #экран-02 .сб-полоса li:nth-child(odd) { border-right: 1px solid color-mix(in srgb, var(--цвет-тёплый-мягкий) 25%, transparent); }
+    #экран-02 .сб-полоса li:nth-child(even) { border-right: 0; }
+    #экран-02 .сб-полоса li:nth-child(-n+2) { border-bottom: 1px solid color-mix(in srgb, var(--цвет-тёплый-мягкий) 25%, transparent); }
+    #экран-02 .сб-дни ul { gap: 12px; }
+    #экран-02 .сб-день__тело { padding: 12px; }
+    #экран-02 .сб-слово { gap: 6px; }
+    #экран-02 .сб-слово svg { width: 22px; height: 22px; }
+    #экран-02 .сб-слово b { font-size: calc(var(--кегль-лид) * 1.15); }
+    #экран-02 .сб-день p { font-size: var(--кегль-мелкий); }
+    #экран-02 .сб-ссылки { flex-wrap: nowrap; gap: 10px; }
+    #экран-02 .сб-ссылки .кнопка { flex: 1 1 0; padding: 0 10px; }
+  }
+
+  #экран-02 { overflow-x: clip; }
+  #экран-02 .сб-полоса { margin-inline: calc(50% - 50vw); border-radius: 0; }
+
+/* экран 03 */
+#экран-03.светлый, #экран-03.тёмный { background: color-mix(in srgb, var(--цвет-текст) 74%, var(--свой-цвет-корка-тёмная)); color: var(--цвет-тёмный-текст); padding-block: var(--отступ-секции); }
+  #экран-03 ul { list-style: none; margin: 0; padding: 0; }
+  #экран-03 li::before { content: none; }
+
+  #экран-03 .шв-верх { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 72px); align-items: center; }
+  #экран-03 .шв-слова { display: grid; gap: 16px; order: 2; }
+  #экран-03 .шв-слова > * { margin: 0; }
+  #экран-03 .шв-слова h2 { font: 700 1em/1.02 var(--шрифт-заголовков); font-size: var(--кегль-h2); text-transform: uppercase; letter-spacing: 0; text-wrap: balance; }
+  #экран-03 .шв-слова h2 .шв-рука { display: block; margin: 10px 0 0 clamp(0px, 2vw, 28px); font: 400 1em/1.1 var(--свой-шрифт-рукописный); font-size: calc(var(--кегль-h2) * .95); text-transform: none; text-wrap: balance; transform: rotate(-3deg); transform-origin: left center; }
+  #экран-03 .шв-слова p { font-size: var(--кегль-лид); line-height: 1.65; }
+  #экран-03 .шв-кадр { order: 1; }
+  #экран-03.светлый .шв-слова h2, #экран-03.тёмный .шв-слова h2 { color: var(--цвет-тёмный-текст); }
+  #экран-03.светлый .шв-слова h2 .шв-рука, #экран-03.тёмный .шв-слова h2 .шв-рука { color: color-mix(in srgb, var(--цвет-акцент-маркер) 62%, var(--цвет-тёплый-мягкий)); }
+  #экран-03.светлый .шв-слова p, #экран-03.тёмный .шв-слова p { color: color-mix(in srgb, var(--цвет-тёмный-текст) 88%, transparent); }
+
+  #экран-03 figure.шв-фото { position: relative; margin: 0; border-radius: var(--радиус-карточки); overflow: hidden; background: none; box-shadow: var(--тень-глубокая); }
+  #экран-03 figure.шв-фото img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 0; }
+  #экран-03 figure.шв-фото::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 45%, transparent 52%, color-mix(in srgb, var(--цвет-текст) 62%, var(--свой-цвет-корка-тёмная)) 100%); }
+
+  #экран-03 .сб-полоса { display: flex; margin: clamp(28px, 4vw, 44px) 0 0; border-radius: var(--радиус); overflow: hidden; }
+  #экран-03.светлый .сб-полоса, #экран-03.тёмный .сб-полоса { background: var(--цвет-акцент-маркер); color: var(--цвет-текст); }
+  #экран-03 .сб-полоса li { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; margin: 0; padding: 18px 20px; font: 500 1em/1.2 var(--шрифт-заголовков); font-size: var(--кегль-лид); letter-spacing: .04em; text-transform: uppercase; text-align: center; border-right: 1px solid color-mix(in srgb, var(--цвет-текст) 25%, transparent); color: var(--цвет-текст); }
+  #экран-03 .сб-полоса li:last-child { border-right: 0; }
+  #экран-03 .сб-полоса li.широко { flex: 1.6 1 0; }
+  #экран-03 .сб-полоса b { font: 500 1em/1.1 var(--шрифт-заголовков); font-size: var(--кегль-цифра); letter-spacing: .02em; }
+
+  #экран-03 .шв-меню { margin: clamp(40px, 6vw, 80px) auto 0; max-width: 760px; padding: clamp(24px, 4vw, 48px) clamp(18px, 4vw, 52px); border-radius: var(--радиус-карточки); box-shadow: var(--тень-глубокая); outline: 1px solid transparent; outline-offset: -10px; }
+  #экран-03.светлый .шв-меню, #экран-03.тёмный .шв-меню { background: color-mix(in srgb, var(--цвет-тёплый-мягкий) 94%, var(--цвет-фон-карточки)); color: var(--цвет-текст); outline-color: color-mix(in srgb, var(--цвет-акцент-маркер) 55%, transparent); }
+  #экран-03 .шв-меню > h3 { margin: 0 0 clamp(14px, 2vw, 24px); text-align: center; font: 700 1em/1.05 var(--шрифт-заголовков); font-size: var(--кегль-h2); text-transform: uppercase; }
+  #экран-03.светлый .шв-меню > h3, #экран-03.тёмный .шв-меню > h3 { color: var(--цвет-текст); }
+  #экран-03 .шв-строка { margin: 0; padding: 10px 0; display: flex; align-items: baseline; gap: 8px; }
+  #экран-03 .шв-строка b { flex: none; font: 500 1em/1.25 var(--шрифт-заголовков); font-size: var(--кегль-лид); text-transform: uppercase; letter-spacing: var(--разрядка-кикера); }
+  #экран-03 .шв-строка i { flex: 1 1 24px; min-width: 24px; align-self: flex-end; margin-bottom: .45em; border-bottom: 2px dotted transparent; }
+  #экран-03.светлый .шв-строка i, #экран-03.тёмный .шв-строка i { border-bottom-color: color-mix(in srgb, var(--цвет-текст) 45%, transparent); }
+  #экран-03 .шв-строка span { flex: 0 1 52%; text-align: right; font-size: var(--кегль-текст); line-height: 1.4; }
+
+  @media (max-width: 899px) {
+    #экран-03 .шв-верх { grid-template-columns: 1fr; gap: 28px; }
+    #экран-03 .шв-слова { order: 1; }
+    #экран-03 .шв-кадр { order: 2; }
+  }
+  @media (max-width: 599px) {
+    #экран-03 figure.шв-фото img { aspect-ratio: 4 / 5; }
+    #экран-03 .сб-полоса { flex-direction: column; }
+    #экран-03 .сб-полоса li, #экран-03 .сб-полоса li.широко { flex: none; align-items: flex-start; text-align: left; padding: 14px 18px; border-right: 0; border-bottom: 1px solid color-mix(in srgb, var(--цвет-текст) 25%, transparent); }
+    #экран-03 .сб-полоса li:last-child { border-bottom: 0; }
+    #экран-03 .шв-строка { flex-wrap: wrap; row-gap: 2px; border-bottom: 2px dotted transparent; padding-bottom: 10px; }
+    #экран-03 .шв-строка i { display: none; }
+    #экран-03 .шв-строка span { flex: 1 1 100%; text-align: left; font-size: var(--кегль-мелкий); }
+    #экран-03.светлый .шв-строка, #экран-03.тёмный .шв-строка { border-bottom-color: color-mix(in srgb, var(--цвет-текст) 35%, transparent); }
+  }
+
+  #экран-03 { overflow-x: clip; }
+  #экран-03 .сб-полоса { margin-inline: calc(50% - 50vw); border-radius: 0; }
+
+  #экран-03.светлый, #экран-03.тёмный { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); padding-block: calc(var(--отступ-секции) * .5) var(--отступ-секции); }
+  #экран-03.светлый .шв-слова h2, #экран-03.тёмный .шв-слова h2 { color: var(--цвет-текст); }
+  #экран-03.светлый .шв-слова h2 .шв-рука, #экран-03.тёмный .шв-слова h2 .шв-рука { color: var(--свой-цвет-корка-тёмная); }
+  #экран-03.светлый .шв-слова p, #экран-03.тёмный .шв-слова p { color: var(--цвет-текст-мягкий); }
+  #экран-03 figure.шв-фото { border-radius: 0; box-shadow: none; overflow: visible; margin-left: clamp(-120px, -6vw, -24px); width: calc(100% + clamp(24px, 6vw, 120px)); -webkit-mask-image: linear-gradient(90deg, transparent 0, var(--цвет-текст) 14%, var(--цвет-текст) 52%, transparent 96%), linear-gradient(180deg, transparent 0, var(--цвет-текст) 16%, var(--цвет-текст) 80%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, var(--цвет-текст) 14%, var(--цвет-текст) 52%, transparent 96%), linear-gradient(180deg, transparent 0, var(--цвет-текст) 16%, var(--цвет-текст) 80%, transparent 100%); -webkit-mask-composite: source-in; mask-composite: intersect; }
+  #экран-03 figure.шв-фото img { aspect-ratio: 4 / 3; }
+  #экран-03 figure.шв-фото::after { content: none; }
+  #экран-03.светлый .сб-полоса, #экран-03.тёмный .сб-полоса { background: var(--цвет-акцент); }
+  #экран-03 .сб-полоса li, #экран-03 .сб-полоса b { color: var(--цвет-на-акценте); }
+  #экран-03 .сб-полоса li { border-color: color-mix(in srgb, var(--цвет-на-акценте) 25%, transparent); }
+  #экран-03.светлый .шв-меню, #экран-03.тёмный .шв-меню { background: var(--цвет-фон-карточки); box-shadow: var(--тень); }
+  @media (max-width: 599px) {
+    #экран-03 figure.шв-фото { margin-left: -16px; width: calc(100% + 32px); }
+    #экран-03 figure.шв-фото img { aspect-ratio: 4 / 5; }
+  }
