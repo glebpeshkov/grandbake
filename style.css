@@ -2135,3 +2135,21 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-06 .см-плитка span { padding: 4px 8px; }
     #экран-06 .см-плитка:last-child { grid-column: 1 / -1; }
   }
+
+/* экран 07 */
+#экран-07 { overflow-x: clip; }
+  #экран-07.светлый, #экран-07.тёмный { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); padding-block: calc(var(--отступ-секции) * .4) calc(var(--отступ-секции) * .45); }
+
+  #экран-07 .пз-всё { display: grid; justify-items: center; gap: clamp(14px, 2vw, 24px); }
+  #экран-07 h2 { margin: 0; font: 700 1em/1.02 var(--шрифт-заголовков); font-size: var(--кегль-h2); text-transform: uppercase; letter-spacing: 0; text-align: center; text-wrap: balance; }
+  #экран-07.светлый h2, #экран-07.тёмный h2 { color: var(--цвет-текст); }
+
+  #экран-07 figure.пз-ролик { margin: 0; width: min(100%, (100svh - 230px) * 16 / 9); min-width: min(100%, 560px); border-radius: 0; box-shadow: none; background: none; overflow: visible; -webkit-mask-image: linear-gradient(90deg, transparent 0, var(--цвет-текст) 6%, var(--цвет-текст) 94%, transparent 100%), linear-gradient(180deg, transparent 0, var(--цвет-текст) 7%, var(--цвет-текст) 93%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, var(--цвет-текст) 6%, var(--цвет-текст) 94%, transparent 100%), linear-gradient(180deg, transparent 0, var(--цвет-текст) 7%, var(--цвет-текст) 93%, transparent 100%); -webkit-mask-composite: source-in; mask-composite: intersect; }
+  #экран-07 figure.пз-ролик video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 0; background: var(--цвет-тёплый-мягкий); }
+
+  #экран-07 .пз-подпись { margin: 0; font: 400 1em/1.15 var(--свой-шрифт-рукописный); font-size: calc(var(--кегль-h2) * .78); text-align: center; text-wrap: balance; transform: rotate(-2deg); }
+  #экран-07.светлый .пз-подпись, #экран-07.тёмный .пз-подпись { color: var(--свой-цвет-корка-тёмная); }
+
+  @media (max-width: 899px) {
+    #экран-07 figure.пз-ролик { width: calc(100% + 32px); min-width: 0; margin-inline: -16px; -webkit-mask-image: linear-gradient(180deg, transparent 0, var(--цвет-текст) 8%, var(--цвет-текст) 92%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0, var(--цвет-текст) 8%, var(--цвет-текст) 92%, transparent 100%); }
+  }

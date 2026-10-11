@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Golos+Text:wght@400;600&display=swap">
-<link rel="stylesheet" href="style.css?v=b967b25b68">
+<link rel="stylesheet" href="style.css?v=fcc65467cd">
 <style>
 :root {
   --шрифт-заголовков: Oswald, 'Arial Narrow', sans-serif;  --свой-шрифт-рукописный: 'Marck Script', cursive;  --свой-цвет-клюква: #A0273A;  --свой-цвет-корка-тёмная: #8F5419;
@@ -370,7 +370,7 @@
   </div>
 </div>
 </section>
-<section class="блок блок--работы светлый второй" id="экран-06" data-тип="работы" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
+<section class="блок блок--работы светлый второй" id="экран-06" data-тип="работы" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
 <div class="блок__внутри">
   <div class="см-верх">
     <div class="см-слова">
@@ -428,6 +428,38 @@
     <p class="см-без">Всегда без пальмового масла</p>
   </div>
 </div>
+</section>
+<section class="блок блок--видео светлый" id="экран-07" data-тип="видео" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон-2, var(--цвет-фон))"></div>
+<div class="блок__внутри">
+  <div class="пз-всё">
+    <h2>Не верьте на слово&nbsp;— посмотрите сами</h2>
+    <figure class="фото пз-ролик">
+      <video muted loop playsinline preload="none" poster="video/proizvodstvo.webp" aria-label="Как делают кантуччи и бискотти на нашем заводе: от замеса до коробки, награды и сертификаты">
+        <source media="(max-width: 599px)" data-src="video/proizvodstvo-tel.mp4" type="video/mp4">
+        <source data-src="video/proizvodstvo.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <p class="пз-подпись">Снято на нашем заводе в Сясьстрое, Ленинградская область</p>
+  </div>
+</div>
+<script>
+  /* ролик грузится, когда до экрана долистали, — и тогда стартует сам, по кругу, без звука (решение владелицы) */
+  (function () {
+    var в = document.querySelector("#экран-07 video");
+    if (!в) return;
+    function запустить() {
+      в.querySelectorAll("source[data-src]").forEach(function (и) { и.src = и.dataset.src; и.removeAttribute("data-src"); });
+      в.load();
+      var п = в.play();
+      if (п && п.catch) п.catch(function () {});
+    }
+    if (!("IntersectionObserver" in window)) { запустить(); return; }
+    var н = new IntersectionObserver(function (записи) {
+      if (записи.some(function (з) { return з.isIntersecting; })) { н.disconnect(); запустить(); }
+    }, { rootMargin: "600px 0px" });
+    н.observe(в);
+  })();
+</script>
 </section>
 <div class="липкая-кнопка"><a class="кнопка кнопка--главная" href="mailto:grandbake@mail.ru">Напишите нам</a></div>
 <script>
