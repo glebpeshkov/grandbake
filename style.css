@@ -2248,6 +2248,9 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-09.светлый .нс-текст, #экран-09.тёмный .нс-текст { color: var(--цвет-текст); }
   #экран-09 .нс-текст small { display: block; margin-top: 4px; font-size: 1em; }
 
+  #экран-09 .нс-сноска { margin: clamp(26px, 2.8vw, 40px) 0 0; max-width: 62ch; font-size: var(--кегль-мелкий); line-height: 1.45; text-wrap: pretty; }
+  #экран-09.светлый .нс-сноска, #экран-09.тёмный .нс-сноска { color: var(--цвет-текст); }
+
   #экран-09 dialog.нс-окно { box-sizing: border-box; width: 100vw; height: 100svh; max-width: none; max-height: none; margin: 0; padding: 3svh 2vw; border: 0; background: transparent; overflow: hidden; }
   #экран-09 dialog.нс-окно[open] { display: flex; align-items: center; justify-content: center; }
   #экран-09 dialog.нс-окно::backdrop { background: rgb(24 59 87 / .86); }
