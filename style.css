@@ -2220,7 +2220,9 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-09.светлый h3, #экран-09.тёмный h3 { color: var(--свой-цвет-корка-тёмная); }
 
   #экран-09 .нс-сетка { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: clamp(18px, 2vw, 28px); row-gap: clamp(22px, 2.4vw, 34px); align-items: start; --нс-кадр: clamp(130px, 10.6vw, 152px); }
-  #экран-09 .нс-карта { margin: 0; display: grid; grid-template-rows: var(--нс-кадр) auto auto; gap: 10px; }
+  #экран-09 .нс-карта { margin: 0; display: grid; grid-template-rows: var(--нс-кадр) auto auto; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+
+  #экран-09 .нс-имя.нс-имя--длинное { font-size: calc(var(--кегль-цифра) * 1.02); }
   #экран-09 .нс-кадр { position: relative; display: block; height: var(--нс-кадр); border-radius: var(--радиус-карточки); overflow: hidden; }
   #экран-09 a.нс-кадр { cursor: zoom-in; }
   #экран-09 a.нс-кадр:focus-visible { outline: 3px solid var(--свой-цвет-клюква); outline-offset: 3px; }
