@@ -2290,6 +2290,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-10 .от-вырезка figure.фото { margin: 0; border-radius: var(--радиус-малый); overflow: hidden; box-shadow: 0 6px 18px color-mix(in srgb, var(--цвет-текст) 14%, transparent), 0 1px 3px color-mix(in srgb, var(--цвет-текст) 12%, transparent); background: var(--цвет-фон-карточки); }
   #экран-10 .от-вырезка img { display: block; width: 100%; height: auto; aspect-ratio: auto; object-fit: fill; border-radius: 0; }
 
+  #экран-10 .от-листайте { display: none; }
   #экран-10 .от-купить { display: grid; gap: 10px; justify-items: start; }
   #экран-10 .от-купить .кнопка { min-height: 56px; padding: 0 34px; font-size: var(--кегль-лид); font-weight: 600; }
   #экран-10 .от-кнопки { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -2304,9 +2305,14 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-10 figure.от-фото img { display: block; width: 100%; height: auto; aspect-ratio: 7 / 4; object-fit: cover; border-radius: 0; }
 
   @media (max-width: 859px) {
-    #экран-10 .от-сетка { grid-template-columns: 1fr; grid-template-areas: "заголовок" "сцена" "список" "купить"; row-gap: 18px; }
-    #экран-10 .от-вырезки { grid-template-columns: 1fr; row-gap: 18px; }
-    #экран-10 .от-вырезка--дикси { width: 82%; justify-self: center; }
+    #экран-10 .от-сетка { grid-template-columns: 1fr; grid-template-areas: "заголовок" "сцена" "список" "листайте" "купить"; row-gap: 18px; }
+
+    #экран-10 .от-вырезки { display: flex; gap: 16px; align-items: center; margin-inline: -16px; padding: 14px 16px 18px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: 16px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    #экран-10 .от-вырезки::-webkit-scrollbar { display: none; }
+    #экран-10 .от-список { display: contents; }
+    #экран-10 .от-вырезка, #экран-10 .от-вырезка--дикси { flex: 0 0 82%; width: auto; scroll-snap-align: start; }
+    #экран-10 .от-листайте { grid-area: листайте; display: block; margin: -6px 0 0; text-align: center; font: 400 1.35em/1.1 var(--свой-шрифт-рукописный); }
+    #экран-10.светлый .от-листайте, #экран-10.тёмный .от-листайте { color: var(--свой-цвет-корка-тёмная); }
     #экран-10 figure.от-фото { margin-inline: -16px; width: calc(100% + 32px); }
     #экран-10 .от-купить { justify-items: stretch; }
     #экран-10 .от-кнопки .кнопка { flex: 1 1 100%; }
